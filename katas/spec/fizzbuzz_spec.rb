@@ -18,3 +18,27 @@ describe '#fizzbuzz' do
     expect(fizzbuzz(15)).to eq 'fizzbuzz'
   end
 end
+
+describe 'fizzbuzzbazz' do
+  subject { fizzbuzzbazz(number) }
+
+  context 'when passed 1' do
+    let(:number) { 1 }
+    it { is_expected.to eq '1' }
+  end
+
+  context 'when passed 3' do
+    let(:number) { 3 }
+    it { is_expected.to eq 'fizz' }
+  end
+
+  context 'when passed 5' do
+    let(:number) { 5 }
+    it { is_expected.to eq 'buzz' }
+  end
+
+  context 'when passed 15' do
+    let(:number) { 15 }
+    it { is_expected.to eq 'fizzbuzz' }
+  end
+end
