@@ -41,4 +41,24 @@ describe 'fizzbuzzbazz' do
     let(:number) { 15 }
     it { is_expected.to eq 'fizzbuzz' }
   end
+
+  context 'when passed 7' do
+    let(:number) { 7 }
+    it { is_expected.to eq 'bazz' }
+  end
+
+  context 'when passed a multiple of 3 and 7' do
+    let(:number) { 3 * 7 * rand(1..10) }
+    it { is_expected.to eq 'fizzbazz' }
+  end
+
+  context 'when passed a multiple of 5 and 7' do
+    let(:number) { 5 * 7 * rand(1..10) }
+    it { is_expected.to eq 'buzzbazz' }
+  end
+
+  context 'when passed a multiple of 3, 5 and 7' do
+    let(:number) { 3 * 5 * 7 * rand(1..10) }
+    it { is_expected.to eq 'fizzbuzzbazz' }
+  end
 end
